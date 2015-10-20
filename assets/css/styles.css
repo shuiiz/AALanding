@@ -11,6 +11,10 @@ body
 
 p { line-height: 1.6em; }
 
+.container {
+  width: 100%;
+}
+
 /* overlay */
 .overlay 
     {
@@ -134,7 +138,7 @@ p { line-height: 1.6em; }
     }
 #home h1
     {
-        font-size: 2.5em;
+        font-size: 3em;
         font-weight: bold;
         text-shadow:1px 1px 4px #2a292a;
     } 
@@ -146,27 +150,121 @@ p { line-height: 1.6em; }
         color:#ffd300;
         border-radius: 10px;
         background:black;
+        box-shadow: 1px 1px 4px #2a292a;
     }
 #home .logo
     {
         margin:0 auto;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 #home .cone
     {
         z-index: 99;
         position:absolute;
-        left:-30px;
-        margin-top: -90px;
-        width:170px;
+        left:-50px;
+        margin-top: -70px;
+        width:190px;
     }
+#home a
+    {
+        z-index:99;
+        position: absolute;
+        right: -80px;
+        opacity:0.5;
+        width:100px;
+        margin-top: -200px;
+        cursor: default;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+#home a:hover
+    {
+        opacity:1;
+        -webkit-animation-name: hvr-wobble-vertical;
+        animation-name: hvr-wobble-vertical;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+    }
+#home .arrow
+    {
+        display:none;
+        width:200px;
+    }
+/* Wobble Vertical */
+@-webkit-keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
 /* end home */
 
 /* start divider */
 #divider
     {
         text-align: center;
-        padding-top: 0;
+        padding-top: 60px;
         padding-bottom: 60px;
     }
 #divider img
@@ -218,9 +316,8 @@ p { line-height: 1.6em; }
     }
 #calculator img
     {
-        width:80%;
-        margin:0 auto;
-        margin-top: 40px;
+        width:100%;
+        margin-top: 50px;
     }    
 #calculator span
     {
@@ -305,6 +402,11 @@ footer
   #home h1 {
     font-size: 3.5em;
   }
+  #home .cone {
+    width:230px;
+    margin-top: -90px;
+    left:-50px;
+  }
 }
 /* end media 500 */
 
@@ -314,15 +416,13 @@ footer
     width: 700px;
   }
   #home h1 {
-    font-size: 4.7em;
+    font-size: 5em;
   }
   #home .cone {
-    width:250px;
-    margin-top: -150px;
+    width:300px;
+    margin-top: -130px;
+    left:-50px;
   }
-  #calculator img {
-    width:50%;
-  } 
 }
 /* end media 768 */
 
@@ -331,17 +431,43 @@ footer
   .container {
     width: 900px;
   }
+  #home .cone {
+    width:300px;
+    margin-top: -145px;
+    left:-50px;
+  }
+  #divider{
+    padding-top: 120px;
+    }
+  #calculator img {
+    margin-top: 0;
+  } 
 }
 /* end media 992 */
 
-/* start media 1200 */
-@media (min-width: 1200px) {
-  .container {
-    width: 1000px;
+/* start media 1600 */
+@media (min-width: 1600px) {
+  .overlay {
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
+  .container {
+    width: 900px;
+  }
+  #home .cone {
+    display:none;
+  }
+  #home .logo {
+    margin-bottom: 90px;
+  }
+  #home .arrow {
+    display:inline;
+  }
+  #divider{
+    padding-top: 60px;
+  }  
 }
-/* end media 1200 */
-
+/* end media 1600 */
 
 
 
