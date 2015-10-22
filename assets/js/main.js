@@ -4,10 +4,9 @@ $(window).load(function(){
 });
 
 $(function() {
-    new WOW().init();
+    new WOW({mobile:false}).init();
     $('.templatemo-nav').singlePageNav({
-    	offset: 70,
-        mobile: false
+    	offset: 70
     });
 
     /* Hide mobile menu after clicking on a link
