@@ -2,6 +2,7 @@ body
     {
         background: #fff;
         font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
         font-weight: 300;
         position: relative;
         width: 100%;
@@ -283,7 +284,7 @@ p { line-height: 1.6em; }
     }    
 #divider h3
     {
-        font-size: 20px;
+        font-size: 2em;
     }
 /* end divider */
 
@@ -297,6 +298,10 @@ p { line-height: 1.6em; }
 #calculator p
     {
         padding-top: 10px;
+    }
+#calculator h2
+    {
+      font-size: 2em;
     }
 #calculator .clickhere
     {  
@@ -335,6 +340,10 @@ p { line-height: 1.6em; }
     {
         padding-top: 10px;
     }
+#safety h2
+    {
+      font-size: 2em;
+    }
 #safety img
     {
         margin:0 auto;
@@ -354,6 +363,7 @@ p { line-height: 1.6em; }
     }
 #contact h2
     {
+        font-size: 2em;
         padding-bottom: 10px;
     }
 #contact address
@@ -439,6 +449,9 @@ footer
   #divider{
     padding-top: 120px;
     }
+  #divider h3 {
+    font-size: 1.5em;
+  }
   #calculator img {
     margin-top: 0;
   } 
