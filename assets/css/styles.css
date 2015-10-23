@@ -270,7 +270,7 @@ p { line-height: 1.6em; }
     }
 #divider img
     {
-        width:40%;
+        max-width:142px;
     }    
 #divider h2
     {
@@ -446,9 +446,12 @@ footer
     margin-top: -145px;
     left:-50px;
   }
-  #divider{
+  #divider {
     padding-top: 120px;
     }
+  #divider img {
+    max-width: 104px;
+  }
   #divider h3 {
     font-size: 1.5em;
   }
